@@ -1,0 +1,15 @@
+Starting program: /home/shay/a/zhan1442/ece264/ece368/proj2/a.out 
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00000000004008b8 in quick_sort (a=
+Cannot access memory at address 0x7fffff3fefd8
+) at project2.c:34
+34	void quick_sort (int *a, int n,int max,int min) {
+Hangup detected on fd 0
+Error detected on fd 0
+error detected on stdin
+A debugging session is active.
+
+	Inferior 1 [process 14628] will be killed.
+
+Quit anyway? (y or n) EOF [assumed Y]

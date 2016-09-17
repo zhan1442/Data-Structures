@@ -1,0 +1,10 @@
+Starting program: /home/shay/a/zhan1442/ece264/proj3/a.out 1.txt
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00000000004015ad in ptnarr (nodearr=0x6029e0, n=6) at proj3.c:210
+210			while ((nodearr[i].path)[j] != 0) {
+A debugging session is active.
+
+	Inferior 1 [process 14523] will be killed.
+
+Quit anyway? (y or n) 

@@ -1,0 +1,57 @@
+Can't find member of namespace, class, struct, or union named "proj1.c"
+Hint: try 'proj1.c<TAB> or 'proj1.c<ESC-?>
+(Note leading single quote.)
+Make breakpoint pending on future shared library load? (y or [n]) Breakpoint 1 at 0x400a91: file proj1.c, line 89.
+Undefined command: "ra".  Try "help".
+Starting program: /home/shay/a/zhan1442/ece264/ece368/a.out 3.txt
+
+Breakpoint 1, simulation (list=0x602ac0) at proj1.c:89
+89		int q0wait = 0;
+90		int q0num = 0;
+91		int q1num = 0;
+96		t += list->duration;
+98		list->detime = t;
+100		node = createnode(list->artime, list->priority, list->duration, list->detime);
+102		if(list -> next != NULL){
+103			list = list->next;
+105		free(node);
+108		while (list != NULL && list->artime < t) {
+109			node = createnode(list->artime, list->priority, list->duration, list->detime);
+111			if (list->priority == 0) q0 = insert(node,q0);
+112			if (list->priority == 1) q1 = insert(node,q1);
+113			list = list->next;
+108		while (list != NULL && list->artime < t) {
+116		while (list != NULL){
+117			while (list != NULL && q0 == NULL && q1 == NULL) {
+135			while (list != NULL && q0 != NULL){
+136				t += q0->duration;
+137				q0->detime = t;
+138				node = createnode(q0->artime, q0->priority, q0->duration,q0->detime);
+139				q0wait += q0->detime - q0->duration - q0->artime;
+140				q0num ++;
+141				q0 = q0->next;
+142				free (node);
+144				while (list != NULL && list->artime < t){
+145					node = createnode(list->artime, list->priority, list->duration,list->detime);
+146					if (list->priority == 0) q0 = insert(node, q0);
+147					if (list->priority == 1) q1 = insert(node, q1);
+148					list = list->next;
+144				while (list != NULL && list->artime < t){
+145					node = createnode(list->artime, list->priority, list->duration,list->detime);
+146					if (list->priority == 0) q0 = insert(node, q0);
+147					if (list->priority == 1) q1 = insert(node, q1);
+148					list = list->next;
+144				while (list != NULL && list->artime < t){
+135			while (list != NULL && q0 != NULL){
+151			while (list != NULL && q1 != NULL){
+116		while (list != NULL){
+168		printf("q0: %d %d\nq1: %d %d\n",q0num,q0wait,q1num,q1wait);
+183		return t;
+Hangup detected on fd 0
+Error detected on fd 0
+error detected on stdin
+A debugging session is active.
+
+	Inferior 1 [process 19342] will be killed.
+
+Quit anyway? (y or n) EOF [assumed Y]

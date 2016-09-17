@@ -1,0 +1,73 @@
+==19612== Memcheck, a memory error detector
+==19612== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==19612== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==19612== Command: a.out 1.txt
+==19612== Parent PID: 23415
+==19612== 
+--19612-- 
+--19612-- Valgrind options:
+--19612--    --tool=memcheck
+--19612--    --leak-check=full
+--19612--    --verbose
+--19612--    --log-file=memcheck.log
+--19612-- Contents of /proc/version:
+--19612--   Linux version 2.6.32-504.3.3.el6.x86_64 (mockbuild@x86-028.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-9) (GCC) ) #1 SMP Fri Dec 12 16:05:43 EST 2014
+--19612-- Arch and hwcaps: AMD64, amd64-sse3-cx16
+--19612-- Page sizes: currently 4096, max supported 4096
+--19612-- Valgrind library directory: /usr/lib64/valgrind
+--19612-- Reading syms from /home/shay/a/zhan1442/ece264/ece368/a.out
+--19612-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--19612--    object doesn't have a dynamic symbol table
+--19612-- Reading syms from /lib64/ld-2.12.so
+--19612--   Considering /usr/lib/debug/.build-id/5b/eb2450b75e84ff317c65f22af8b8112c25df63.debug ..
+--19612--   .. build-id is valid
+--19612-- Scheduler: using generic scheduler lock implementation.
+--19612-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==19612== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-19612-by-zhan1442-on-ecegrid-thin1.ecn.purdue.edu
+==19612== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-19612-by-zhan1442-on-ecegrid-thin1.ecn.purdue.edu
+==19612== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-19612-by-zhan1442-on-ecegrid-thin1.ecn.purdue.edu
+==19612== 
+==19612== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==19612== don't want to do, unless you know exactly what you're doing,
+==19612== or are doing some strange experiment):
+==19612==   /usr/lib64/valgrind/../../bin/vgdb --pid=19612 ...command...
+==19612== 
+==19612== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==19612==   /path/to/gdb a.out
+==19612== and then give GDB the following command
+==19612==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=19612
+==19612== --pid is optional if only one valgrind process is running
+==19612== 
+--19612-- REDIR: 0x37676176d0 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--19612-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--19612-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--19612-- REDIR: 0x37676174e0 (index) redirected to 0x4a07c30 (index)
+--19612-- REDIR: 0x3767617560 (strcmp) redirected to 0x4a08570 (strcmp)
+--19612-- Reading syms from /lib64/libc-2.12.so
+--19612--   Considering /usr/lib/debug/.build-id/22/aa38cca59a5df6cf07b8fc1778e2ee0384508e.debug ..
+--19612--   .. build-id is valid
+--19612-- REDIR: 0x3767a84cd0 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--19612-- REDIR: 0x3767a86f90 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--19612-- REDIR: 0x3767a82c40 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--19612-- REDIR: 0x3767a7a640 (malloc) redirected to 0x4a069ac (malloc)
+--19612-- REDIR: 0x3767a83350 (memchr) redirected to 0x4a08610 (memchr)
+--19612-- REDIR: 0x3767a89670 (memcpy) redirected to 0x4a08b60 (memcpy)
+--19612-- REDIR: 0x3767a81120 (strlen) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--19612-- REDIR: 0x3767b33570 (__strlen_sse42) redirected to 0x4a07f90 (strlen)
+--19612-- REDIR: 0x3767a7f630 (index) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--19612-- REDIR: 0x3767b281f0 (__strchr_sse42) redirected to 0x4a07b40 (index)
+--19612-- REDIR: 0x3767a8aaf0 (strchrnul) redirected to 0x4a09fb0 (strchrnul)
+--19612-- REDIR: 0x3767a7b520 (free) redirected to 0x4a063a9 (free)
+==19612== 
+==19612== HEAP SUMMARY:
+==19612==     in use at exit: 0 bytes in 0 blocks
+==19612==   total heap usage: 30 allocs, 30 frees, 2,841 bytes allocated
+==19612== 
+==19612== All heap blocks were freed -- no leaks are possible
+==19612== 
+==19612== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+--19612-- 
+--19612-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--19612-- used_suppression:      2 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==19612== 
+==19612== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
